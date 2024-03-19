@@ -132,13 +132,13 @@ function App() {
                   </p>
 
                   <div className="d-flex gap-1">
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Full Time
                     </span>
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Remote
                     </span>
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Wallfare
                     </span>
                   </div>
@@ -170,13 +170,13 @@ function App() {
                   </p>
 
                   <div className="d-flex gap-1">
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Part Time
                     </span>
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       On site
                     </span>
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Stocks
                     </span>
                   </div>
@@ -208,13 +208,13 @@ function App() {
                   </p>
 
                   <div className="d-flex gap-1">
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Full Time
                     </span>
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Ibrid
                     </span>
-                    <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2">
+                    <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2">
                       Stocks
                     </span>
                   </div>
@@ -233,7 +233,7 @@ function App() {
               <p className="fs-4 fw-semibold">Ultimi lavori</p>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center ">
-              <p className="badge rounded-pill text-bg-secondary fw-light px-3 py-2">
+              <p className="badge rounded-pill text-bg-secondary fw-light px-2 py-2">
                 Guarda tutto
               </p>
             </div>
@@ -242,34 +242,34 @@ function App() {
 
         <div className="overflow-x-scroll d-flex gap-4">
           <div className="d-flex gap-2 px-2">
-            <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2 ">
+            <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2 ">
               Technology
             </span>
 
-            <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2 ">
+            <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2 ">
               Marketing
             </span>
 
-            <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2 ">
+            <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2 ">
               Ingegneria
             </span>
-            <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2 ">
+            <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2 ">
               Design
             </span>
-            <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2 ">
+            <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2 ">
               Legale
             </span>
 
-            <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2 ">
+            <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2 ">
               Ristorazione
             </span>
-            <span className="badge rounded-pill text-bg-primary fw-light px-3 py-2 ">
+            <span className="badge rounded-pill text-bg-primary fw-light px-2 py-2 ">
               Sanità
             </span>
           </div>
         </div>
 
-        <div className="d-flex flex-column gap-3 px-1 my-2 vh-100">
+        <div className="d-flex flex-column gap-3 px-1 my-3 vh-100 h-100">
             <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
               <div className="row">
                 <div className="col-2">
