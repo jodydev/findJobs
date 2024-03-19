@@ -30,7 +30,7 @@ function App() {
                   <p className="fs-6 text-secondary  letter-spacing m-0 font-weight-lighter">
                     Bentornato 👋
                   </p>
-                  <p className="fs-3 fw-semibold text-dark letter-spacing m-0">
+                  <p className="fs-2 fw-semibold text-dark letter-spacing m-0">
                     Jody Ossino
                   </p>
                 </div>
@@ -97,7 +97,7 @@ function App() {
         <div className="container-fluid my-2">
           <div className="row">
             <div className="col-8">
-              <p className="fs-4 fw-semibold">Raccomandati</p>
+              <p className="fs-3 fw-semibold">Raccomandati</p>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center ">
               <p className="badge rounded-pill text-bg-secondary fw-light px-3 py-2">
@@ -230,10 +230,10 @@ function App() {
         <div className="container-fluid mt-2">
           <div className="row">
             <div className="col-8">
-              <p className="fs-4 fw-semibold">Ultimi lavori</p>
+              <p className="fs-3 fw-semibold">Ultimi lavori</p>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center ">
-              <p className="badge rounded-pill text-bg-secondary fw-light px-2 py-2">
+              <p className="badge rounded-pill text-bg-secondary fw-light px-3 py-2">
                 Guarda tutto
               </p>
             </div>
@@ -269,7 +269,7 @@ function App() {
           </div>
         </div>
 
-        <div className="d-flex flex-column gap-3 px-1 my-3 vh-100 h-100">
+        <div className="d-flex flex-column gap-3 px-1 my-3 vh-100 my-5">
             <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
               <div className="row">
                 <div className="col-2">
