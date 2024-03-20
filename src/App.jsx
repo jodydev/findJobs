@@ -311,7 +311,7 @@ function App() {
           </div>
         </div>
 
-        <div className="d-flex flex-column gap-3 px-1 my-3 vh-100 mt-3 mb-5">
+        <div className="d-flex flex-column gap-3 px-1 my-3 mt-3 mb-5">
           <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
             <div className="row">
               <div className="col-2">
