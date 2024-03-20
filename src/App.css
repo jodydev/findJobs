@@ -23,8 +23,7 @@ body {
 
 /* Barra di scorrimento su Chrome/Safari */
 ::-webkit-scrollbar {
-  width: 10px; /* larghezza della barra di scorrimento */
-  background-color: transparent; /* rendi lo sfondo trasparente */
+  display: none !important;
 }
 
 .searchbar {
@@ -148,16 +147,12 @@ body {
   align-items: center;
   background: white;
   background-color: white;
-  width: 95%;
-  /* border-top: 10px solid var(--clr);
-  border-left: 8px solid var(--clr);
-  border-right: 8px solid var(--clr); */
-  border: 10px solid var(--clr);
-  border-radius: 25px;
+  width: 100%;
+  border-top: 10px solid var(--clr);
+  border-radius: 20px 20px 0 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1px;
   z-index: 1;
-  margin-left: 10px;
+
 }
 .navigation {
   width: 100%;
@@ -167,7 +162,7 @@ body {
   justify-content: center;
   z-index: 1;
   background-color: white;
-  border-radius: 25px ;
+  border-radius: 25px 25px 0 0;
 }
 .navigation ul {
   display: flex;
