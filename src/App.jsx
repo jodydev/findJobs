@@ -115,7 +115,7 @@ function App() {
       </section>
 
       <section id="recommended">
-        <div className="container-fluid my-2">
+        <div className="container-fluid my-2 mb-0">
           <div className="row">
             <div className="col-8">
               <p className="fs-3 fw-semibold">
@@ -137,9 +137,9 @@ function App() {
           </div>
         </div>
 
-        <div className="container mt-2">
+        <div className="container">
           <div className="overflow-x-scroll d-flex gap-5">
-            <div className="my-card rounded-4 p-2">
+            <div className="my-card px-2 rounded-4">
               <div className="row">
                 <div className="col-3">
                   <img
@@ -178,7 +178,7 @@ function App() {
               </div>
             </div>
 
-            <div className="my-card rounded-4 p-2 ">
+            <div className="my-card px-2 rounded-4 ">
               <div className="row">
                 <div className="col-3">
                   <img
@@ -217,7 +217,7 @@ function App() {
               </div>
             </div>
 
-            <div className="my-card rounded-4 p-2">
+            <div className="my-card px-2 rounded-4">
               <div className="row">
                 <div className="col-3">
                   <img
@@ -260,7 +260,7 @@ function App() {
       </section>
 
       <section id="trending">
-        <div className="container-fluid mt-2">
+        <div className="container-fluid mt-3">
           <div className="row">
             <div className="col-8">
               <p className="fs-3 fw-semibold">
@@ -311,7 +311,7 @@ function App() {
           </div>
         </div>
 
-        <div className="d-flex flex-column gap-3 px-1 my-3 mt-3 mb-5">
+        <div className="d-flex flex-column gap-3 px-1 my-4 vh-100">
           <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
             <div className="row">
               <div className="col-2">
@@ -392,15 +392,15 @@ function App() {
               <div className="col-2">
                 <img
                   className="w-100"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/1587px-Tesla_Motors.svg.png"
                   alt=""
                   srcSet=""
                 />
               </div>
               <div className="col-8">
-                <p className="fs-6 fw-semibold m-0">Web Developer</p>
+                <p className="fs-6 fw-semibold m-0">R&D Engineer</p>
                 <p className="fs-6 font-weight-lighter text-secondary">
-                  Google LLC
+                  Tesla Motor
                 </p>
                 <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
                   Guarda i dettagli
@@ -417,15 +417,15 @@ function App() {
               <div className="col-2">
                 <img
                   className="w-100"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
+                  src="https://cdn.icon-icons.com/icons2/2699/PNG/512/nvidia_logo_icon_169902.png"
                   alt=""
                   srcSet=""
                 />
               </div>
               <div className="col-8">
-                <p className="fs-6 fw-semibold m-0">Data Analist</p>
+                <p className="fs-6 fw-semibold m-0">Prompt Engineer</p>
                 <p className="fs-6 font-weight-lighter text-secondary">
-                  Microsoft
+                  Nvdia Corporation
                 </p>
                 <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
                   Guarda i dettagli
@@ -437,30 +437,7 @@ function App() {
             </div>
           </div>
 
-          <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
-            <div className="row">
-              <div className="col-2">
-                <img
-                  className="w-100"
-                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                  alt=""
-                  srcSet=""
-                />
-              </div>
-              <div className="col-8">
-                <p className="fs-6 fw-semibold m-0">Swift Developer</p>
-                <p className="fs-6 font-weight-lighter text-secondary">
-                  Apple Inc
-                </p>
-                <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
-                  Guarda i dettagli
-                </p>
-              </div>
-              <div className="col-2">
-                <HiOutlineBookmark color="gray" size={25} />
-              </div>
-            </div>
-          </div>
+         
         </div>
       </section>
 

@@ -10,7 +10,7 @@ body {
 
   font-family: "Gantari", sans-serif;
   background-color: #f1f3f4;
-  height: calc(100% + 500px) !important;
+
 }
 
 ::placeholder {
