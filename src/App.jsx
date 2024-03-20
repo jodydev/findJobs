@@ -7,11 +7,16 @@ import { HiOutlineBookmark } from "react-icons/hi";
 import { LuListFilter } from "react-icons/lu";
 import Navbar from "./components/Navbar";
 // index.js o App.js (o in qualsiasi altro file principale del tuo progetto)
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHome, faUser, faComment, faCamera, faCog } from '@fortawesome/free-solid-svg-icons';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faHome,
+  faUser,
+  faComment,
+  faCamera,
+  faCog,
+} from "@fortawesome/free-solid-svg-icons";
 
 library.add(faHome, faUser, faComment, faCamera, faCog);
-
 
 function App() {
   return (
@@ -28,7 +33,13 @@ function App() {
               <div className="container d-flex aling-items-center px-3 ">
                 <div className="row">
                   <p className="fs-6 text-secondary  letter-spacing m-0 font-weight-lighter">
-                    Bentornato 👋
+                    Bentornato{" "}
+                    <img
+                      src="/public/waving-hand-light-skin-tone-svgrepo-com.svg"
+                      alt="Icon"
+                      width="23"
+                      height="23"
+                    />
                   </p>
                   <p className="fs-2 fw-semibold text-dark letter-spacing m-0">
                     Jody Ossino
@@ -38,7 +49,12 @@ function App() {
             </div>
             <div className="col-2">
               <div className="d-flex justify-content-center align-items-center my-4">
-                <IoNotificationsOutline size={30} />
+                <img
+                  src="/notification-bell-svgrepo-com.svg"
+                  alt="Icon"
+                  width="30"
+                  height="30"
+                />
               </div>
             </div>
           </div>
@@ -74,7 +90,12 @@ function App() {
             </div>
             <div className="col-2">
               <div className="d-flex justify-content-center align-items-center my-2">
-                <LuListFilter className="text-primary" size={25} />
+                <img
+                  src="/public/setting-2-svgrepo-com.svg"
+                  alt="Icon"
+                  width="25"
+                  height="25"
+                />
               </div>
             </div>
           </div>
@@ -97,10 +118,19 @@ function App() {
         <div className="container-fluid my-2">
           <div className="row">
             <div className="col-8">
-              <p className="fs-3 fw-semibold">Raccomandati</p>
+              <p className="fs-3 fw-semibold">
+                Raccomandati{" "}
+                <img
+                  src="/public/recommended-like-svgrepo-com.svg"
+                  alt="Icon"
+                  width="20"
+                  height="20"
+                  className="mb-4"
+                />
+              </p>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center ">
-              <p className="badge rounded-pill text-bg-secondary fw-light px-3 py-2">
+              <p className="badge rounded-pill text-dark shadow-sm fw-normal px-3 py-2" style={{backgroundColor: "#D4d4d4"}}>
                 Guarda tutto
               </p>
             </div>
@@ -120,7 +150,9 @@ function App() {
                   />
                 </div>
                 <div className="col-9">
-                  <p className="fs-5 fw-semibold m-0 text-nowrap ">Web Developer</p>
+                  <p className="fs-5 fw-semibold m-0 text-nowrap ">
+                    Web Developer
+                  </p>
                   <p className="fs-6 font-weight-lighter text-secondary">
                     Google LLC
                   </p>
@@ -143,7 +175,6 @@ function App() {
                     </span>
                   </div>
                 </div>
-              
               </div>
             </div>
 
@@ -158,7 +189,9 @@ function App() {
                   />
                 </div>
                 <div className="col-9">
-                  <p className="fs-5 fw-semibold m-0 text-nowrap">Data Analist</p>
+                  <p className="fs-5 fw-semibold m-0 text-nowrap">
+                    Data Analist
+                  </p>
                   <p className="fs-6 font-weight-lighter text-secondary">
                     Microsoft
                   </p>
@@ -181,7 +214,6 @@ function App() {
                     </span>
                   </div>
                 </div>
-           
               </div>
             </div>
 
@@ -196,7 +228,9 @@ function App() {
                   />
                 </div>
                 <div className="col-9">
-                  <p className="fs-5 fw-semibold m-0 text-nowrap ">Swift Developer</p>
+                  <p className="fs-5 fw-semibold m-0 text-nowrap ">
+                    Swift Developer
+                  </p>
                   <p className="fs-6 font-weight-lighter text-secondary">
                     Apple Inc
                   </p>
@@ -219,7 +253,6 @@ function App() {
                     </span>
                   </div>
                 </div>
-         
               </div>
             </div>
           </div>
@@ -230,10 +263,19 @@ function App() {
         <div className="container-fluid mt-2">
           <div className="row">
             <div className="col-8">
-              <p className="fs-3 fw-semibold">Ultimi lavori</p>
+              <p className="fs-3 fw-semibold">
+                Ultimi lavori{" "}
+                <img
+                  src="/public/badge-new-svgrepo-com.svg"
+                  alt="Icon"
+                  width="20"
+                  height="20"
+                  className="mb-4"
+                />
+              </p>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center ">
-              <p className="badge rounded-pill text-bg-secondary fw-light px-3 py-2">
+              <p className="badge rounded-pill shadow-sm text-dark fw-normal px-3 py-2" style={{backgroundColor: "#D4d4d4"}}>
                 Guarda tutto
               </p>
             </div>
@@ -269,163 +311,157 @@ function App() {
           </div>
         </div>
 
-        <div className="d-flex flex-column gap-3 px-1 my-3 vh-100 my-5">
-            <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
-              <div className="row">
-                <div className="col-2">
-                  <img
-                    className="w-100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
-                    alt=""
-                    srcSet=""
-                  />
-                </div>
-                <div className="col-8">
-                  <p className="fs-6 fw-semibold m-0">Web Developer</p>
-                  <p className="fs-6 font-weight-lighter text-secondary">
-                    Google LLC
-                  </p>
-                  <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
-                    Guarda i dettagli
-                  </p>
-
-                </div>
-                <div className="col-2">
-                  <HiOutlineBookmark color="gray" size={25} />
-                </div>
+        <div className="d-flex flex-column gap-3 px-1 my-3 vh-100 mt-3 mb-5">
+          <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
+            <div className="row">
+              <div className="col-2">
+                <img
+                  className="w-100"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
+                  alt=""
+                  srcSet=""
+                />
               </div>
-            </div>
-
-            <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
-              <div className="row">
-                <div className="col-2">
-                  <img
-                    className="w-100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
-                    alt=""
-                    srcSet=""
-                  />
-                </div>
-                <div className="col-8">
-                  <p className="fs-6 fw-semibold m-0">Data Analist</p>
-                  <p className="fs-6 font-weight-lighter text-secondary">
-                    Microsoft
-                  </p>
-                  <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
-                    Guarda i dettagli
-                  </p>
-
-                  
-                </div>
-                <div className="col-2">
-                  <HiOutlineBookmark color="gray" size={25} />
-                </div>
+              <div className="col-8">
+                <p className="fs-6 fw-semibold m-0">Web Developer</p>
+                <p className="fs-6 font-weight-lighter text-secondary">
+                  Google LLC
+                </p>
+                <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
+                  Guarda i dettagli
+                </p>
               </div>
-            </div>
-
-            <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
-              <div className="row">
-                <div className="col-2">
-                  <img
-                    className="w-100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                    alt=""
-                    srcSet=""
-                  />
-                </div>
-                <div className="col-8">
-                  <p className="fs-6 fw-semibold m-0">Swift Developer</p>
-                  <p className="fs-6 font-weight-lighter text-secondary">
-                    Apple Inc
-                  </p>
-                  <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
-                    Guarda i dettagli
-                  </p>
-                </div>
-                <div className="col-2">
-                  <HiOutlineBookmark color="gray" size={25} />
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
-              <div className="row">
-                <div className="col-2">
-                  <img
-                    className="w-100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
-                    alt=""
-                    srcSet=""
-                  />
-                </div>
-                <div className="col-8">
-                  <p className="fs-6 fw-semibold m-0">Web Developer</p>
-                  <p className="fs-6 font-weight-lighter text-secondary">
-                    Google LLC
-                  </p>
-                  <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
-                    Guarda i dettagli
-                  </p>
-
-                </div>
-                <div className="col-2">
-                  <HiOutlineBookmark color="gray" size={25} />
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
-              <div className="row">
-                <div className="col-2">
-                  <img
-                    className="w-100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
-                    alt=""
-                    srcSet=""
-                  />
-                </div>
-                <div className="col-8">
-                  <p className="fs-6 fw-semibold m-0">Data Analist</p>
-                  <p className="fs-6 font-weight-lighter text-secondary">
-                    Microsoft
-                  </p>
-                  <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
-                    Guarda i dettagli
-                  </p>
-
-                  
-                </div>
-                <div className="col-2">
-                  <HiOutlineBookmark color="gray" size={25} />
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
-              <div className="row">
-                <div className="col-2">
-                  <img
-                    className="w-100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                    alt=""
-                    srcSet=""
-                  />
-                </div>
-                <div className="col-8">
-                  <p className="fs-6 fw-semibold m-0">Swift Developer</p>
-                  <p className="fs-6 font-weight-lighter text-secondary">
-                    Apple Inc
-                  </p>
-                  <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
-                    Guarda i dettagli
-                  </p>
-                </div>
-                <div className="col-2">
-                  <HiOutlineBookmark color="gray" size={25} />
-                </div>
+              <div className="col-2">
+                <HiOutlineBookmark color="gray" size={25} />
               </div>
             </div>
           </div>
+
+          <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
+            <div className="row">
+              <div className="col-2">
+                <img
+                  className="w-100"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
+                  alt=""
+                  srcSet=""
+                />
+              </div>
+              <div className="col-8">
+                <p className="fs-6 fw-semibold m-0">Data Analist</p>
+                <p className="fs-6 font-weight-lighter text-secondary">
+                  Microsoft
+                </p>
+                <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
+                  Guarda i dettagli
+                </p>
+              </div>
+              <div className="col-2">
+                <HiOutlineBookmark color="gray" size={25} />
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
+            <div className="row">
+              <div className="col-2">
+                <img
+                  className="w-100"
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  alt=""
+                  srcSet=""
+                />
+              </div>
+              <div className="col-8">
+                <p className="fs-6 fw-semibold m-0">Swift Developer</p>
+                <p className="fs-6 font-weight-lighter text-secondary">
+                  Apple Inc
+                </p>
+                <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
+                  Guarda i dettagli
+                </p>
+              </div>
+              <div className="col-2">
+                <HiOutlineBookmark color="gray" size={25} />
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
+            <div className="row">
+              <div className="col-2">
+                <img
+                  className="w-100"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
+                  alt=""
+                  srcSet=""
+                />
+              </div>
+              <div className="col-8">
+                <p className="fs-6 fw-semibold m-0">Web Developer</p>
+                <p className="fs-6 font-weight-lighter text-secondary">
+                  Google LLC
+                </p>
+                <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
+                  Guarda i dettagli
+                </p>
+              </div>
+              <div className="col-2">
+                <HiOutlineBookmark color="gray" size={25} />
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
+            <div className="row">
+              <div className="col-2">
+                <img
+                  className="w-100"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
+                  alt=""
+                  srcSet=""
+                />
+              </div>
+              <div className="col-8">
+                <p className="fs-6 fw-semibold m-0">Data Analist</p>
+                <p className="fs-6 font-weight-lighter text-secondary">
+                  Microsoft
+                </p>
+                <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
+                  Guarda i dettagli
+                </p>
+              </div>
+              <div className="col-2">
+                <HiOutlineBookmark color="gray" size={25} />
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-4 p-2 mx-2 bg-light shadow p-3">
+            <div className="row">
+              <div className="col-2">
+                <img
+                  className="w-100"
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  alt=""
+                  srcSet=""
+                />
+              </div>
+              <div className="col-8">
+                <p className="fs-6 fw-semibold m-0">Swift Developer</p>
+                <p className="fs-6 font-weight-lighter text-secondary">
+                  Apple Inc
+                </p>
+                <p className="fs-6 font-weight-lighter text-primary text-decoration-underline  m-0 text-nowrap">
+                  Guarda i dettagli
+                </p>
+              </div>
+              <div className="col-2">
+                <HiOutlineBookmark color="gray" size={25} />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Navbar />
