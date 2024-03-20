@@ -35,7 +35,7 @@ function App() {
                   <p className="fs-6 text-secondary  letter-spacing m-0 font-weight-lighter">
                     Bentornato{" "}
                     <img
-                      src="/public/waving-hand-light-skin-tone-svgrepo-com.svg"
+                      src="/waving-hand-light-skin-tone-svgrepo-com.svg"
                       alt="Icon"
                       width="23"
                       height="23"
@@ -91,7 +91,7 @@ function App() {
             <div className="col-2">
               <div className="d-flex justify-content-center align-items-center my-2">
                 <img
-                  src="/public/setting-2-svgrepo-com.svg"
+                  src="/setting-2-svgrepo-com.svg"
                   alt="Icon"
                   width="25"
                   height="25"
@@ -121,7 +121,7 @@ function App() {
               <p className="fs-3 fw-semibold">
                 Raccomandati{" "}
                 <img
-                  src="/public/recommended-like-svgrepo-com.svg"
+                  src="/recommended-like-svgrepo-com.svg"
                   alt="Icon"
                   width="20"
                   height="20"
@@ -266,7 +266,7 @@ function App() {
               <p className="fs-3 fw-semibold">
                 Ultimi lavori{" "}
                 <img
-                  src="/public/badge-new-svgrepo-com.svg"
+                  src="/badge-new-svgrepo-com.svg"
                   alt="Icon"
                   width="20"
                   height="20"
