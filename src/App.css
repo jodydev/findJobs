@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --clr: #262433;
+  --dark: #262433;
+  --light-blue: #0d6efd;
+  --dark-blue: #042d62;
 }
 
 body {
   padding: 0;
   margin: 0;
-
+  overflow: auto;
   font-family: "Gantari", sans-serif;
   background-color: #f1f3f4;
-
 }
 
 ::placeholder {
@@ -47,7 +48,7 @@ body {
   border-color: rgba(223, 225, 229, 0);
 }
 
-.searchbar-wrapper {
+.searchbar-re.register {
   flex: 1;
   display: flex;
   padding: 5px 8px 0 14px;
@@ -63,7 +64,7 @@ body {
   margin-top: -5px;
 }
 
-.search-icon-wrapper {
+.search-icon-re.register {
   margin: auto;
 }
 
@@ -139,7 +140,6 @@ body {
   width: 2.8em;
 }
 
-
 .nav {
   position: fixed;
   bottom: 0;
@@ -149,8 +149,7 @@ body {
   background: white;
   background-color: white;
   width: 100%;
-  border-top: 10px solid var(--clr);
-  border-radius: 20px 20px 0 0;
+  border-top: 10px solid var(--dark);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
@@ -208,8 +207,8 @@ body {
   height: 70px;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
-  border: 6px solid var(--clr);
-  background: var(--clr);
+  border: 6px solid var(--dark);
+  background: var(--dark);
   cursor: pointer;
   transition: 0.5s;
 }
@@ -221,7 +220,7 @@ body {
   width: 20px;
   height: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 4px -6px 0 2px var(--clr);
+  box-shadow: 4px -6px 0 2px var(--dark);
 }
 
 .indicator::after {
@@ -232,7 +231,7 @@ body {
   width: 20px;
   height: 20px;
   border-top-left-radius: 20px;
-  box-shadow: -4px -6px 0 2px var(--clr);
+  box-shadow: -4px -6px 0 2px var(--dark);
   z-index: -1;
 }
 .navigation ul li:nth-child(2).active ~ .indicator {
@@ -259,4 +258,235 @@ body {
   transform-origin: bottom;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   transform: scale(0.85);
+}
+
+.my-card {
+  border: 1px solid #dfe1e5;
+}
+
+.fw-sm {
+  font-size: 13px;
+}
+
+/*=============================================
+=            LOGIN FORM            =
+=============================================*/
+.login {
+  background-image: url("/public/wallpaper-login.png");
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.login form .title {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+  position: relative;
+  color: var(--dark-blue);
+}
+.login form .title:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 40px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+  background: var(--light-blue);
+}
+.login form .input-box {
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+.login form .input-box input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+.login form .underline::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+.login form .underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--light-blue);
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+.login form .input-box input:focus ~ .underline::after,
+.login form .input-box input:valid ~ .underline::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.login form .button {
+  margin: 40px 0 20px 0;
+}
+.login .input-box input[type="submit"] {
+  font-size: 16px;
+  color: #fff;
+  border-radius: 20px;
+  background: var(--dark-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login .input-box input[type="submit"]:hover {
+  letter-spacing: 1px;
+  background: var(--light-blue);
+}
+.login .option {
+  font-size: 14px;
+  text-align: center;
+}
+.login .google a,
+.login .linkedin a,
+.login .apple a {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  height: 50px;
+  text-decoration: none;
+  padding-left: 60px;
+  line-height: 45px;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 30px !important;
+  cursor: pointer;
+}
+.login .google i,
+.login .linkedin i,
+.login .apple i {
+  padding-right: 12px;
+  font-size: 20px;
+}
+.login .google a,
+.login .linkedin a,
+.login .apple a {
+  background-color: white;
+  margin: 20px 0 15px 0;
+}
+.login .google a:hover {
+  background-color: #bcbcbc;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.login .linkedin a:hover {
+  background-color: #bcbcbc;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.login .apple a:hover {
+  background-color: #bcbcbc;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+/*=============================================
+=            REGISTER FORM            =
+=============================================*/
+
+.register {
+   background-image: url("/public/wallpaper-register.png");
+  background-size: cover;
+  background-position: center; 
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.register form .title {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+  position: relative;
+  color: white;
+}
+.register form .title:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 40px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+  background: white;
+}
+
+.register form {
+  margin-top: 30px;
+}
+.register form .input-box {
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid #ccc;
+  border-bottom-width: 2.5px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-color: #4070f4;
+}
+form .policy {
+  display: flex;
+  align-items: center;
+}
+form h3 {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 20px;
+  background: var(--dark-blue);
+  cursor: pointer;
+}
+.input-box.button input:hover {
+  background: var(--light-blue);
+}
+form .text h3 {
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+form .text h3 a {
+  color: #4070f4;
+  text-decoration: none;
+}
+form .text h3 a:hover {
+  text-decoration: underline;
 }
