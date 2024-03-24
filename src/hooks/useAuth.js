@@ -19,7 +19,7 @@ function useAuth() {
          password,
        });
     } catch (error) {
-      throw error || new Error("I dati inseriti non sono corretti, riprova.");
+      new Error("I dati inseriti non sono corretti, riprova.");
     }
   };
 

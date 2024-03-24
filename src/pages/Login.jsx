@@ -18,12 +18,12 @@ const Login = () => {
     try {
       // Effettua il login utilizzando le credenziali fornite
       await signIn(email, password);
-      navigate("/home");
+      navigate("/aggiungi-info");
     } catch (error) {
       // Se si verifica un errore durante il login, imposta un messaggio di errore
       const errorMessage = "I dati inseriti non sono corretti, riprova.";
       console.log('====================================');
-      console.log(error);
+      console.log(errorMessage);
       console.log('====================================');
       setError(errorMessage);
     }
@@ -49,7 +49,7 @@ const Login = () => {
           role="alert"
         >
           <i className="fa-solid fa-lg fa-triangle-exclamation mx-2"></i>
-          <div>{error}</div>
+          <div>{errorMessage}</div>
         </div>
       )}
 

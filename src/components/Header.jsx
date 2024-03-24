@@ -2,6 +2,7 @@ import Avatar from "@mui/material/Avatar";
 import useAuth from "../hooks/useAuth";
 
 export default function Header() {
+
   const { signOut } = useAuth();
 
   return (
