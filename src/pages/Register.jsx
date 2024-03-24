@@ -49,6 +49,7 @@ export default function Register() {
     } catch (error) {
       // Gestisce eventuali errori durante la registrazione
       setError("Errore durante la registrazione, riprova");
+      console.error(error);
     }
 
   };

@@ -13,10 +13,14 @@ function useAuth() {
 
   // Funzione per il login di un utente esistente
   const signIn = async (email, password) => {
-    await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    try {
+       await supabase.auth.signInWithPassword({
+         email,
+         password,
+       });
+    } catch (error) {
+      throw error || new Error("I dati inseriti non sono corretti, riprova.");
+    }
   };
 
   // Funzione per il logout dell'utente attuale
@@ -48,17 +52,14 @@ function useAuth() {
     return () => subscription.unsubscribe();
   }, []);
 
-
   // Restituisce le funzioni e i dati relativi all'autenticazione
   return {
     session,
+    setSession,
     signIn,
     signUp,
     signOut,
-    // signInWithGithub,
   };
 }
 
 export default useAuth;
-
-

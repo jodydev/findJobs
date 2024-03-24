@@ -21,8 +21,10 @@ const Login = () => {
       navigate("/home");
     } catch (error) {
       // Se si verifica un errore durante il login, imposta un messaggio di errore
-      const errorMessage =
-        error.message || "I dati inseriti non sono corretti, riprova.";
+      const errorMessage = "I dati inseriti non sono corretti, riprova.";
+      console.log('====================================');
+      console.log(error);
+      console.log('====================================');
       setError(errorMessage);
     }
   };

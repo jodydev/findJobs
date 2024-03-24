@@ -1,6 +1,9 @@
 import Avatar from "@mui/material/Avatar";
+import useAuth from "../hooks/useAuth";
 
 export default function Header() {
+  const { signOut } = useAuth();
+
   return (
     <header>
       <div className="container-fluid py-2 px-3">
@@ -30,6 +33,9 @@ export default function Header() {
           </div>
           <div className="col-2">
             <div className="d-flex justify-content-end align-items-center my-4 gap-2">
+              <button onClick={signOut} type="button" className="btn btn-dark">
+                Esci
+              </button>
               <img
                 src="/notification-bell-svgrepo-com.svg"
                 alt="Icon"

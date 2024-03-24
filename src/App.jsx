@@ -1,47 +1,50 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useEffect } from "react";
 import supabase from "./supabase/client";
 import useAuth from "./hooks/useAuth";
 import AppContext from "./contexts/AppContext";
 import Layout from "./components/Layout";
 import Login from "./pages/Login";
-import Routing from "./routes/Routing";
 import Register from "./pages/Register";
+import HomePage from "./pages/HomePage";
+import LoggedUserRoutes from "./auth/LoggedUserRoutes";
 
-export function App() {
-  const { session, signIn, signUp, signOut } = useAuth();
+function App() {
+  const { session } = useAuth();
+
+  console.log('====================================');
+  console.log(session);
+  console.log('====================================');
 
   return (
     <Router>
       <Routes>
-        <Route path="/accedi" element={<Login onLogin={signIn} />} />
+        <Route path="/accedi" element={<Login />} />
         <Route path="/registrati" element={<Register />} />
-
         <Route
           path="/*"
-          element={
-            session ? ( //? da passare a true
-              <Layout>
-                <Routing />
-              </Layout>
-            ) : (
-              <Navigate to="/accedi" replace />
-            )
-          }
+          element={session ? <LoggedInRoutes /> : <Navigate to="/accedi" replace />}
         />
       </Routes>
     </Router>
   );
 }
 
-// Componente root dell'applicazione
-function Root() {
-  const userData = useAuth(); // Utilizzo del custom hook per l'autenticazione
+function LoggedInRoutes() {
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route element={<LoggedUserRoutes />} />
+      </Routes>
+    </Layout>
+  );
+}
 
-  const [session, setSession] = useState(null);
+function Root() {
+  const { setSession } = useAuth();
 
   // Effetto per ottenere e impostare la sessione corrente
   useEffect(() => {
@@ -56,12 +59,7 @@ function Root() {
     });
   }, []);
 
-  // Restituisce la struttura dell'applicazione
-  return (
-    <AppContext.Provider value={{ session, setSession, userData }}>
-      <App />
-    </AppContext.Provider>
-  );
+  return <App />;
 }
 
 export default Root;
