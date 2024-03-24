@@ -23,7 +23,7 @@ export default function SearchBar() {
                     autoCapitalize="off"
                     autoComplete="off"
                     title="Search"
-                    placeholder="Cerca un lavoro, un'azienda, una competenza..."
+                    placeholder="Cerca un lavoro o un'azienda..."
                   />
                 </div>
               </div>

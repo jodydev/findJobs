@@ -48,7 +48,7 @@ body {
   border-color: rgba(223, 225, 229, 0);
 }
 
-.searchbar-re.register {
+.searchbar-wrapper {
   flex: 1;
   display: flex;
   padding: 5px 8px 0 14px;
@@ -64,7 +64,7 @@ body {
   margin-top: -5px;
 }
 
-.search-icon-re.register {
+.search-icon-wrapper {
   margin: auto;
 }
 
@@ -272,7 +272,7 @@ body {
 =            LOGIN FORM            =
 =============================================*/
 .login {
-  background-image: url("/public/wallpaper-login.png");
+  background-image: url("/wallpaper-login.png");
   background-size: cover;
   background-position: center;
   overflow-y: hidden;
@@ -408,7 +408,7 @@ body {
 =============================================*/
 
 .register {
-   background-image: url("/public/wallpaper-register.png");
+   background-image: url("/wallpaper-register.png");
   background-size: cover;
   background-position: center; 
   overflow-y: hidden;

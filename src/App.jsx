@@ -1,37 +1,67 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
+import supabase from "./supabase/client";
 import useAuth from "./hooks/useAuth";
+import AppContext from "./contexts/AppContext";
 import Layout from "./components/Layout";
 import Login from "./pages/Login";
 import Routing from "./routes/Routing";
 import Register from "./pages/Register";
 
-function App() {
-  const { isAuthenticated, login, logout } = useAuth();
+export function App() {
+  const { session, signIn, signUp, signOut } = useAuth();
 
   return (
     <Router>
-    <Routes>
-      {/* Route per la pagina di login */}
-      <Route path="/accedi" element={<Login onLogin={login} />} />
-      {/* Route per la pagina di registrazione */}
-      <Route path="/registrati" element={<Register />} />
+      <Routes>
+        <Route path="/accedi" element={<Login onLogin={signIn} />} />
+        <Route path="/registrati" element={<Register />} />
 
-      {/* Route protette che richiedono l'autenticazione */}
-      <Route
-        path="/*"
-        element={isAuthenticated ? (
-          <Layout>
-            <Routing onLogout={logout} />
-          </Layout>
-        ) : (
-          <Navigate to="/login" replace />
-        )}
-      />
-    </Routes>
-  </Router>
+        <Route
+          path="/*"
+          element={
+            session ? ( //? da passare a true
+              <Layout>
+                <Routing />
+              </Layout>
+            ) : (
+              <Navigate to="/accedi" replace />
+            )
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
-export default App;
+// Componente root dell'applicazione
+function Root() {
+  const userData = useAuth(); // Utilizzo del custom hook per l'autenticazione
+
+  const [session, setSession] = useState(null);
+
+  // Effetto per ottenere e impostare la sessione corrente
+  useEffect(() => {
+    // Ottiene la sessione corrente
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+
+    // Ascolta i cambiamenti di autenticazione
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+  }, []);
+
+  // Restituisce la struttura dell'applicazione
+  return (
+    <AppContext.Provider value={{ session, setSession, userData }}>
+      <App />
+    </AppContext.Provider>
+  );
+}
+
+export default Root;

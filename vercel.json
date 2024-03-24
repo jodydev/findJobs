@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/assets/img/(.*)",
+        "dest": "/assets/img/$1"
+      }
+    ]
+  }
+  
