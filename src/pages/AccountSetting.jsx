@@ -207,14 +207,14 @@ console.log(currentStep);
                 <span>1</span>
                 Dati personali
               </li>
-              <li
+              {/* <li
                 className={`formbold-step-menu2 ${
                   currentStep === 2 ? "active" : ""
                 }`}
               >
                 <span>2</span>
                 Preferenze lavorative
-              </li>
+              </li> */}
               <li
                 className={`formbold-step-menu3 ${
                   currentStep === 3 ? "active" : ""
@@ -305,26 +305,7 @@ console.log(currentStep);
             </div>
           </div>
 
-          {/* //? STEP 2 */}
-          <div
-            className={`formbold-form-step-2 ${
-              currentStep === 2 ? "active" : ""
-            }`}
-          >
-            <div>
-              <label htmlFor="message" className="formbold-form-label">
-                {" "}
-                Message{" "}
-              </label>
-              <textarea
-                rows="6"
-                name="message"
-                id="message"
-                placeholder="Type your message"
-                className="formbold-form-input"
-              ></textarea>
-            </div>
-          </div>
+          
 
           {/* //? STEP 3 */}
           <div
