@@ -144,58 +144,40 @@ export default function AccountSetting() {
   // }
 
   const [currentStep, setCurrentStep] = useState(1);
+  const navigate = useNavigate();
 
- // Funzione per passare allo step successivo
-const goToNextStep = () => {
-  setCurrentStep((prevStep) => prevStep + 1);
-};
-
-// Funzione per gestire il clic sul pulsante "Next Step"
-const handleNextStepClick = (event) => {
-  event.preventDefault();
-  goToNextStep();
-};
-
-// Funzione per gestire il clic sui pulsanti di conferma nei passaggi successivi
-const handleConfirmationButtonClick = (event) => {
-  event.preventDefault();
-  // Inviare il modulo quando si è nello step 3
-  document.querySelector("form").submit();
-};
-
-useEffect(() => {
-  const formSubmitBtn = document.querySelector(".formbold-btn");
-
-  // Aggiungi un event listener per gestire il clic sul pulsante "Next Step"
-  formSubmitBtn.addEventListener("click", handleNextStepClick);
-
-  // Pulisci gli eventi quando il componente viene smontato
-  return () => {
-    formSubmitBtn.removeEventListener("click", handleNextStepClick);
+  const goToNextStep = () => {
+    event.preventDefault();
+    if (currentStep === 1) {
+      setCurrentStep(2);
+    } else if (currentStep === 2) {
+      setCurrentStep(3);
+    }
+    else if (currentStep === 3) {
+      navigate("/home")
+    }
   };
-}, [currentStep]); // Assicurati di passare currentStep come dipendenza
 
-// Effetto per aggiungere l'event listener per i pulsanti di conferma nei passaggi successivi
-useEffect(() => {
-  const confirmButtons = document.querySelectorAll(".formbold-confirm-btn");
-  confirmButtons.forEach((button) => {
-    button.addEventListener("click", handleConfirmationButtonClick);
-  });
-
-  // Pulisci gli eventi quando il componente viene smontato
-  return () => {
-    confirmButtons.forEach((button) => {
-      button.removeEventListener("click", handleConfirmationButtonClick);
-    });
+  const goToPrevStep = (event) => {
+    event.preventDefault();
+    if (currentStep === 2) {
+      setCurrentStep(1);
+    } else if (currentStep === 3) {
+      setCurrentStep(2);
+    }
   };
-}, []); // Assicurati di passare un array vuoto come dipendenza
 
-console.log(currentStep);
-
+  useEffect(() => {
+    const formSubmitBtn = document.querySelector(".formbold-btn");
+    formSubmitBtn.addEventListener("click", goToNextStep);
+    return () => {
+      formSubmitBtn.removeEventListener("click", goToNextStep);
+    };
+  }, []);
 
   return (
     <div className="formbold-main-wrapper">
-      <div className="formbold-form-wrapper p-4">
+      <div className="formbold-form-wrapper py-5 px-4 my-5">
         <form action="https://formbold.com/s/FORM_ID" method="POST">
           <div className="formbold-steps">
             <ul>
@@ -207,14 +189,14 @@ console.log(currentStep);
                 <span>1</span>
                 Dati personali
               </li>
-              {/* <li
+              <li
                 className={`formbold-step-menu2 ${
                   currentStep === 2 ? "active" : ""
                 }`}
               >
                 <span>2</span>
                 Preferenze lavorative
-              </li> */}
+              </li>
               <li
                 className={`formbold-step-menu3 ${
                   currentStep === 3 ? "active" : ""
@@ -226,7 +208,6 @@ console.log(currentStep);
             </ul>
           </div>
 
-          {/* //? STEP 1 */}
           <div
             className={`formbold-form-step-1 ${
               currentStep === 1 ? "active" : ""
@@ -235,8 +216,7 @@ console.log(currentStep);
             <div className="formbold-input-flex">
               <div>
                 <label htmlFor="firstname" className="formbold-form-label">
-                  {" "}
-                  Nome{" "}
+                  Nome
                 </label>
                 <input
                   type="text"
@@ -248,8 +228,7 @@ console.log(currentStep);
               </div>
               <div>
                 <label htmlFor="lastname" className="formbold-form-label">
-                  {" "}
-                  Cognome{" "}
+                  Cognome
                 </label>
                 <input
                   type="text"
@@ -264,8 +243,7 @@ console.log(currentStep);
             <div className="formbold-input-flex">
               <div>
                 <label htmlFor="dob" className="formbold-form-label">
-                  {" "}
-                  Data di nascita{" "}
+                  Data di nascita
                 </label>
                 <input
                   type="date"
@@ -277,8 +255,7 @@ console.log(currentStep);
               </div>
               <div>
                 <label htmlFor="city" className="formbold-form-label">
-                  {" "}
-                  Città{" "}
+                  Città
                 </label>
                 <input
                   type="text"
@@ -292,8 +269,7 @@ console.log(currentStep);
 
             <div>
               <label htmlFor="address" className="formbold-form-label">
-                {" "}
-                Indirizzo{" "}
+                Indirizzo
               </label>
               <input
                 type="text"
@@ -305,9 +281,19 @@ console.log(currentStep);
             </div>
           </div>
 
-          
+          <div
+            className={`formbold-form-step-2 ${
+              currentStep === 2 ? "active" : ""
+            }`}
+          >
+            <div className="formbold-form-confirm">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt.
+              </p>
+            </div>
+          </div>
 
-          {/* //? STEP 3 */}
           <div
             className={`formbold-form-step-3 ${
               currentStep === 3 ? "active" : ""
@@ -318,24 +304,28 @@ console.log(currentStep);
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
               </p>
-
-             
             </div>
           </div>
 
           <div className="formbold-form-btn-wrapper">
-            {/* {currentStep !== 1 && (
-              <button
-                onClick={handleBackButtonClick}
-                className="formbold-back-btn"
-              >
-                Back
-              </button>
-            )} */}
+            {currentStep === 2 || 3 ? (
+              <>
+                <button
+                  onClick={goToPrevStep}
+                  className="formbold-btn"
+                >
+                  Indietro
+                </button>
 
-            <button onClick={handleNextStepClick} className="formbold-btn">
-              {currentStep === 2 ? "Conferma" : currentStep === 3 ? "Submit" : "Avanti"}
-            </button>
+                <button onClick={goToNextStep} className="formbold-btn">
+                  Conferma
+                </button>
+              </>
+            ) : (
+              <button onClick={goToNextStep} className="formbold-btn">
+               Avanti
+              </button>
+            )}
           </div>
         </form>
       </div>

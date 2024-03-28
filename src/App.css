@@ -309,6 +309,21 @@ body {
   font-size: 16px;
   border: none;
 }
+
+.login form .input-box-1 {
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+.login form .input-box-1 input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+  background-color: transparent !important;
+}
 .login form .underline::before {
   content: "";
   position: absolute;
@@ -504,7 +519,9 @@ form .text h3 a:hover {
 .formbold-form-wrapper {
   margin: 0 auto;
   width: 100%;
-  background: white;
+  background: transparent;
+  height: 100%;
+  padding: 50px 0;
 }
 
 .formbold-steps {
@@ -571,7 +588,7 @@ form .text h3 a:hover {
   resize: none;
 }
 .formbold-form-input:focus {
-  border-color: #6a64f1;
+  border-color: var(--light-blue);
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
 .formbold-form-label {
@@ -617,7 +634,7 @@ form .text h3 a:hover {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
 }
 .formbold-confirm-btn.active {
-  background: #6A64F1;
+  background: var(--dark-blue);
   color: #FFFFFF;
 }
 
@@ -661,7 +678,7 @@ form .text h3 a:hover {
   padding: 10px 25px;
   border: none;
   font-weight: 500;
-  background-color: #6A64F1;
+  background-color: var(--dark-blue);
   color: white;
   cursor: pointer;
 }

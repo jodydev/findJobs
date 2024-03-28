@@ -1,11 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import supabase from "./supabase/client";
 import useAuth from "./hooks/useAuth";
-import AppContext from "./contexts/AppContext";
-import LayoutHomePage from "./components/LayoutHomePage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HomePage from "./pages/HomePage";
@@ -17,7 +16,6 @@ function App() {
 
   return (
     <Router>
-      
       <Routes>
         <Route path="/accedi" element={<Login />} />
         <Route path="/registrati" element={<Register />} />
@@ -32,13 +30,11 @@ function App() {
 
 function LoggedInRoutes() {
   return (
-    <LayoutHomePage>
-      <Routes>
-        <Route path="/aggiungi-info" element={<AccountSetting />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route element={<LoggedUserRoutes />} />
-      </Routes>
-    </LayoutHomePage>
+    <Routes>
+      <Route path="/aggiungi-info" element={<AccountSetting />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route element={<LoggedUserRoutes />} />
+    </Routes>
   );
 }
 

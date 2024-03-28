@@ -55,7 +55,7 @@ const Login = () => {
 
       <form onSubmit={handleLogin}>
         <div className="title">Accedi</div>
-        <div className="input-box underline">
+        <div className="input-box-1 underline">
           <input
             type="email"
             name="email"
@@ -67,7 +67,7 @@ const Login = () => {
           />
           <div className="underline"></div>
         </div>
-        <div className="input-box d-flex align-items-center">
+        <div className="input-box-1 d-flex align-items-center">
           <input
             type={showPassword ? "text" : "password"}
             name="password"
@@ -78,7 +78,7 @@ const Login = () => {
             required
           />
           <button
-            className="bg-light border-0"
+            className=" bg-transparent border-0"
             type="button"
             onClick={togglePasswordVisibility}
           >
